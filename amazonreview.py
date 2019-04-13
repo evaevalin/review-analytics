@@ -21,14 +21,24 @@ print('一共有', len(new), '筆資料長度小於100字')
 print(new[0])
 print(new[1])
 
-good =[]
-for d in data:
-    if 'good' in d:
-        good.append(d)
-print('共有', len(good), '筆留言提到good')
-print(good[0])
 
 
+# good =[]
+# for d in data:
+#     if 'good' in d:
+#         good.append(d)
+# print('共有', len(good), '筆留言提到good')
+# print(good[0])
+
+good = [d for d in data if 'good' in d] #篩選快寫法
+print(good)
+
+bad = ['bad' in d for d in data]
+print(bad)
+
+# bad =[]
+# for d in data: 
+#     bad.append('bad' in d)
 
 
 
